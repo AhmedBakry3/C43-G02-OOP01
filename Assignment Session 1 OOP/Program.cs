@@ -95,11 +95,11 @@
 
             Colors color = new Colors();
             bool isParsed;
-            Colors ColorName;
+            Colors colorName;
             do
             {
                 Console.Write("Please Enter Color Name : ");
-                isParsed = Enum.TryParse(Console.ReadLine(), out ColorName);
+                isParsed = Enum.TryParse(Console.ReadLine(), out colorName);
                             do
             { 
                 Console.Write("Please Enter Color Name : ");

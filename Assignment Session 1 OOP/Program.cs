@@ -100,10 +100,6 @@
             {
                 Console.Write("Please Enter Color Name : ");
                 isParsed = Enum.TryParse(Console.ReadLine(), out colorName);
-                            do
-            { 
-                Console.Write("Please Enter Color Name : ");
-                isParsed = Enum.TryParse(Console.ReadLine(), out colorName);
                 Console.WriteLine(isParsed
                           ? (colorName == Colors.Red || colorName == Colors.Blue || colorName == Colors.Green 
                               ? $"The {colorName} color is a primary color."

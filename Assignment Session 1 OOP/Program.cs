@@ -28,7 +28,7 @@
             {
                 Console.Write("Please Enter Season Name : ");
                 isParsed = Enum.TryParse(Console.ReadLine(), out SeasonName);
-            } while (!isParsed || SeasonName < Season.Spring || SeasonName > Season.Winter); // Check if isparsed is not false and check that is my number from Spring to Winter ( From 1 to 4)
+            } while (!isParsed || SeasonName < Season.Spring || SeasonName > Season.Winter); // Check if isparsed is not True and check that is my number from Spring to Winter ( From 1 to 4)
             season = SeasonName;
 
 
@@ -100,19 +100,17 @@
             {
                 Console.Write("Please Enter Color Name : ");
                 isParsed = Enum.TryParse(Console.ReadLine(), out ColorName);
-            } while (!isParsed || ColorName < Colors.Red || ColorName > Colors.Green); // Check if isparsed is not false and check that is my number from Red to Green ( From 1 to 3)
-            color = ColorName;
+                            do
+            { 
+                Console.Write("Please Enter Color Name : ");
+                isParsed = Enum.TryParse(Console.ReadLine(), out colorName);
+                Console.WriteLine(isParsed
+                          ? (colorName == Colors.Red || colorName == Colors.Blue || colorName == Colors.Green 
+                              ? $"The {colorName} color is a primary color."
+                              : "")
+                          : "This Color is not a primary Color");
+            } while (!isParsed); // Check if isparsed is not True
 
-            Console.WriteLine(color);
-
-            if (color == Colors.Red || color == Colors.Blue || color == Colors.Green)
-            {
-                Console.WriteLine($"The {color} Color is a primary Color"); // Since there only 3 colors in Enum ( Red , Blue , Green) and they are Primary colors , it will always print Priamry Color 
-            }
-            else
-            {
-                Console.WriteLine($"the {color} Color is not a primary color");
-            }
             #endregion
         }
     }
